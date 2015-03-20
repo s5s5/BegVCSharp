@@ -57,15 +57,15 @@ namespace Ch04Ex08
                     }
                     Console.Write("\n");
                 }
-                Console.WriteLine("realMin:{0};realMax:{1};imagMin:{2};imagMax:{3};",
+                Console.WriteLine("realMin:{0}; realMax:{1}; imagMin:{2}; imagMax:{3};",
                     realMin,realMax, imagMin, imagMax);
-                Console.WriteLine("realMin:");
+                Console.WriteLine("realMin(-2.0~2.0):");
                 realMin = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine("realMax:");
+                Console.WriteLine("realMax(-2.0~2.0):");
                 realMax = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine("imagMin:");
+                Console.WriteLine("imagMin(-2.0~2.0):");
                 imagMin = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine("imagMax:");
+                Console.WriteLine("imagMax(-2.0~2.0):");
                 imagMax = Convert.ToDouble(Console.ReadLine());
             }
         }

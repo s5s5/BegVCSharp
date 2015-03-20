@@ -10,22 +10,39 @@ namespace Ch04Ex08
     {
         static void Main(string[] args)
         {
-            double realCoord, imagCoord;
+            double inputWidth = 0, inputHeight;
+            double screenWidth = 78;
+            bool screenWidthTrue = true;
+            double realCoord = 0.03;
+            double imagCoord = 0.05;
             double realTemp, imagTemp, realTemp2, arg;
-            int iterations;
-            for (imagCoord = 1.2; imagCoord >= -1.2; imagCoord -= 0.05)
+
+            while (screenWidthTrue)
             {
-                for (realCoord = -0.6; realCoord <= 1.77; realCoord += 0.03)
+                Console.WriteLine("Enter width:");
+                inputWidth = Convert.ToDouble(Console.ReadLine());
+                if (inputWidth <= screenWidth && inputWidth > 0)
+                {
+                    screenWidthTrue = false;
+                }
+            }
+            Console.WriteLine("Enter height:");
+            inputHeight = Convert.ToDouble(Console.ReadLine());
+
+            int iterations;
+            for (double i = 1.2; i >= -(imagCoord * inputHeight); i -= imagCoord)
+            {
+                for (double j = -0.6; j <= ((realCoord * inputWidth) - 0.6); j += realCoord)
                 {
                     iterations = 0;
-                    realTemp = realCoord;
-                    imagTemp = imagCoord;
-                    arg = (realCoord * realCoord) + (imagCoord * imagCoord);
+                    realTemp = j;
+                    imagTemp = i;
+                    arg = (j * j) + (i * i);
                     while ((arg < 4) && (iterations < 40))
                     {
                         realTemp2 = (realTemp * realTemp) - (imagTemp * imagTemp)
-                                    - realCoord;
-                        imagTemp = (2 * realTemp * imagTemp) - imagCoord;
+                                    - j;
+                        imagTemp = (2 * realTemp * imagTemp) - i;
                         realTemp = realTemp2;
                         arg = (realTemp * realTemp) + (imagTemp * imagTemp);
                         iterations += 1;

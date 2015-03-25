@@ -12,11 +12,12 @@ namespace Ch05Ex09
         {
             Console.WriteLine("Enter more Word:");
             string words = Console.ReadLine();
-            string[] s = words.Split(' ');
-            foreach (var s1 in s)
-            {
-                Console.Write("\"{0}\"", s1);
-            }
+            //string[] s = words.Split(' ');
+            //foreach (var s1 in s)
+            //{
+            //    Console.Write("\"{0}\"", s1);
+            //}
+            Console.WriteLine("\"" + words.Replace(" ", "\" \"") + "\"");
             Console.ReadKey();
         }
     }

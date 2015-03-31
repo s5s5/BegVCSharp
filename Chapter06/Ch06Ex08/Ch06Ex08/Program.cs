@@ -21,7 +21,7 @@ namespace Ch06Ex08
 
             public string info()
             {
-                return "Order Information: " + uniCount + " " + itemName.ToString() +
+                return "Order Information: " + uniCount.ToString() + " " + itemName +
                        " items at $" + unitCost.ToString() + " each, total cost $" +
                        TotalCost().ToString();
             }

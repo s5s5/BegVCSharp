@@ -18,9 +18,9 @@ namespace Traffic
             Console.ReadKey();
         }
 
-        static void AddPassenger(IPassengerCarrier Vehicle)
+        static void AddPassenger(IPassengerCarrier vehicle)
         {
-            Console.WriteLine(Vehicle.ToString());
+            Console.WriteLine(vehicle.ToString());
         }
     }
 }

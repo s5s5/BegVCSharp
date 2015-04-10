@@ -1,6 +1,17 @@
-﻿namespace Ch11Ex01
+﻿using System;
+
+namespace Ch11Ex01
 {
-    class Cow
+    public class Cow : Animal
     {
+        public void Milk()
+        {
+            Console.WriteLine("{0} has been milked.", name);
+        }
+
+        public Cow(string newName) : base(newName)
+        {
+            
+        }
     }
 }

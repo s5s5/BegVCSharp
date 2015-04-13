@@ -60,7 +60,6 @@ namespace Ch11Ex01
             Console.WriteLine("The animal is now called {0}",
                               ((Animal)animalArrayList[1]).Name);
             Console.ReadKey();
-
         }
     }
 }

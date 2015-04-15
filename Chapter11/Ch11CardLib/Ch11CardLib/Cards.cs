@@ -1,8 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 
 namespace Ch11CardLib
 {
-    public class Cards : CollectionBase
+    public class Cards : CollectionBase, ICloneable
     {
         public void Add(Card newCard)
         {
@@ -41,6 +42,16 @@ namespace Ch11CardLib
         public bool Contains(Card card)
         {
             return InnerList.Contains(card);
+        }
+        
+        public object Clone()
+        {
+            Cards newCards = new Cards();
+            foreach (Card sourceCard in List)
+            {
+                newCards.Add((Card)sourceCard.Clone());
+            }
+            return newCards;
         }
     }
 }

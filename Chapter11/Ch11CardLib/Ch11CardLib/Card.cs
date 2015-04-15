@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Ch11CardLib
 {
-    public class Card
+    public class Card : ICloneable
     {
         public readonly Rank rank;
         public readonly Suit suit;
@@ -18,6 +18,11 @@ namespace Ch11CardLib
         {
             suit = newSuit;
             rank = newRank;
+        }
+
+        public object Clone()
+        {
+            return MemberwiseClone();
         }
 
         public override string ToString()
